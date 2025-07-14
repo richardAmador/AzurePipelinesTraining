@@ -19,3 +19,7 @@ steps:
     echo "📂 Listing project files:"
     dir
   displayName: "Environment check"
+- task: CopyFiles@2
+  inputs:
+    Contents: '**/*.war'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
